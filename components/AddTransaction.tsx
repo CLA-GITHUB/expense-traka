@@ -4,7 +4,7 @@ const AddTransaction: React.FC = ({}) => {
   return (
     <div>
       <div className='mb-3'>
-        <p className='font-semibold text-xl'>History</p>
+        <p className='font-semibold text-xl dark:text-white'>Add Transaction</p>
         <div className='mt-3' />
         <hr />
       </div>
