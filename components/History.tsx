@@ -5,7 +5,7 @@ const History: React.FC = ({}) => {
   return (
     <div className='flex flex-col space-y-4'>
       <div>
-        <p className='font-semibold text-xl'>History</p>
+        <p className='font-semibold text-xl dark:text-white'>History</p>
         <div className='mt-3' />
         <hr />
       </div>

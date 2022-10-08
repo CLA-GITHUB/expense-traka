@@ -14,11 +14,13 @@ const Transaction: React.FC<TransactionProps> = ({
   const [hide, setHide] = React.useState<Boolean>(false);
   const [showDel, setShowDel] = React.useState<Boolean>(false);
   return (
-    <>
+    <div
+      className={`p-2 text-sm bg-white dark:bg-[#16213E] border-r-4  ${
+        amount < 0 ? "border-r-red-600" : "border-r-lime-500"
+      }`}
+    >
       <div
-        className={`flex justify-center items-center border-r-4  ${
-          amount < 0 ? "border-r-red-600" : "border-r-lime-500"
-        }  p-2 text-sm bg-white`}
+        className={`flex justify-center items-center  `}
         onClick={() => setHide(!hide)}
         onDoubleClick={() => setShowDel(!showDel)}
       >
@@ -27,11 +29,11 @@ const Transaction: React.FC<TransactionProps> = ({
             <RiCloseLine className='text-xl text-white' />
           </button>
         )} */}
-        <p className='flex-1 font-semibold'>{title}</p>
-        <p className='font-semibold'>₦{amount}</p>
+        <p className='flex-1 font-medium dark:text-white'>{title}</p>
+        <p className='font-medium dark:text-white'>₦{amount}</p>
       </div>
-      {hide && <span className='text-sm p-2 bg-white'>{comment}</span>}
-    </>
+      {hide && <p className='py-3 dark:text-white'>{comment}</p>}
+    </div>
   );
 };
 export default Transaction;
